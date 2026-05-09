@@ -11,7 +11,7 @@ def main():
         "docx" : [".docx"],
         "ppt" : [".pptx"],
         "pdf" : [".pdf"],
-        "exel" : [".xlsx"]
+        "excel" : [".xlsx"]
     }
 
 
