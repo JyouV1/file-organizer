@@ -2,19 +2,27 @@ import os
 import shutil
 from pathlib import Path
 
-home = Path.home()
-Documents = home / "Documents"
+Documents = Path.home() / "Documents"
 
 
-folders = ["txt", "docx", "ppt", "pdf", "exel"]
+extensionlist = {
+    "txt" : [".txt"],
+    "docx" : [".docx"],
+    "ppt" : [".pptx"],
+    "pdf" : [".pdf"],
+    "exel" : [".xlsx"]
+}
 
 
-try:
-    Documents.mkdir(parents=True, exist_ok=False)
-    print("create extension folder")
-except FileExistsError:
-    print("extension folder already created")
 
-for extension in folders :
-    ext = Documents / extension
-    ext.mkdir(parents=True, exist_ok=True)
+for folder in extensionlist :
+    os.makedirs(os.path.join(Documents, folder), exist_ok=True)
+
+for file in os.listdir(Documents):
+    file_path = os.path.join(Documents, file)
+    if os.path.isfile(file_path):
+        for folder, extensions in extensionlist.items():
+            if any(file.endswith(ext) for ext in extensions):
+                shutil.move(file_path, os.path.join(Documents, folder, file))
+                break
+
