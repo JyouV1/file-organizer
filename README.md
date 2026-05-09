@@ -2,8 +2,6 @@
 
 Automatically organize files in your Documents folder.
 
-## Note
-To use it you can only organize file that in folder "Documents" and can only organize pptx, docx, txt, pdf, xlsx extension
 
 ## How to use
 Run this command in your terminal:
@@ -12,6 +10,7 @@ Run this command in your terminal:
 curl -sSL https://raw.githubusercontent.com/JyouV1/file-organizer/main/main.py | python3
 ```
 
-
+## Note
+To use it you can only organize file that in folder "Documents" and can only organize pptx, docx, txt, pdf, xlsx extension
 
 This my first project dont judge me 🤙
