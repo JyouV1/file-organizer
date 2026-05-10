@@ -10,7 +10,7 @@ Run this command in your terminal:
 curl -sSL https://raw.githubusercontent.com/JyouV1/file-organizer/main/main.py | python3
 ```
 
-If you use Windows run this command in powershell:
+If you use powershell you can run this command:
 
 ```powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/JyouV1/file-organizer/main/main.py" | python
