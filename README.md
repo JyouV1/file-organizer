@@ -12,7 +12,9 @@ curl -sSL https://raw.githubusercontent.com/JyouV1/file-organizer/main/main.py |
 
 If you use Windows run this command in powershell:
 
+```powershell
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/JyouV1/file-organizer/main/main.py" | python
+```
 
 ## Note
 To use it you can only organize file that in folder "Documents" and can only organize pptx, docx, txt, pdf, xlsx extension
